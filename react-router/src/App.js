@@ -14,11 +14,15 @@ class App extends Component {
         <nav className='App-nav'>
           <NavLink exact activeClassName='active-link' to='/'>About</NavLink>
           <NavLink exact activeClassName='active-link' to='/dog'>Dog</NavLink>
+          {/* <NavLink exact activeClassName='active-link' to='/dog/r'>Dog (r)</NavLink> */}
+          <NavLink exact activeClassName='active-link' to='/dog/c'>Dog (c)</NavLink>
           <NavLink exact activeClassName='active-link' to='/contact'>Contact</NavLink>
         </nav>
         <Routes>
           <Route path='/' Component={About}/>
           <Route path='/dog' Component={Dog}/>
+          <Route path='/dog/c' Component={() => <Dog name='Muffins'/>}/>
+          {/* <Route path='/dog/r' render={() => <Dog name='Biscuits'/>}/> */}
           <Route path='/dog/hater' Component={Hater}/>
           <Route path='/contact' Component={Contact}/>
         </Routes>
