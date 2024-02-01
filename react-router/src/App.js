@@ -7,16 +7,18 @@ import "./App.css";
 
 const Hater = () => <h1>I ABSOLUTELY HATE DOGS!</h1>;
 
+const navActiveCheck = (navData) => (navData.isActive ? "active-link" : "");
+
 class App extends Component {
   render() {
     return (
       <div className='App'>
         <nav className='App-nav'>
-          <NavLink exact activeClassName='active-link' to='/'>About</NavLink>
-          <NavLink exact activeClassName='active-link' to='/dog'>Dog</NavLink>
+          <NavLink exact className={navActiveCheck} to='/'>About</NavLink>
+          <NavLink exact className={navActiveCheck} to='/dog'>Dog</NavLink>
           {/* <NavLink exact activeClassName='active-link' to='/dog/r'>Dog (r)</NavLink> */}
-          <NavLink exact activeClassName='active-link' to='/dog/c'>Dog (c)</NavLink>
-          <NavLink exact activeClassName='active-link' to='/contact'>Contact</NavLink>
+          <NavLink exact className={navActiveCheck} to='/dog/c'>Dog (c)</NavLink>
+          <NavLink exact className={navActiveCheck} to='/contact'>Contact</NavLink>
         </nav>
         <Routes>
           <Route path='/' Component={About}/>
