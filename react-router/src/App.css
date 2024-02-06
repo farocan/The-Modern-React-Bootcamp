@@ -15,7 +15,7 @@
   justify-content: space-around;
 }
 
-.navActiveCheck {
+.active-link {
   color: pink;
   border-bottom: 1px solid white;
 }
